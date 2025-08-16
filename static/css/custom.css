@@ -1,0 +1,470 @@
+*.navbar-collapse {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  z-index: 999;
+  padding: 10px 0;
+  /* border: #fb6818 4px solid ; 
+  border-radius: 5px;Just Now */
+}
+
+/* Add comment about page which css is  */
+button#read-more-btn {
+    margin-bottom: 15% !important;
+}
+.padding_0 {
+    padding: 0;
+}
+
+.footer-row{
+    background-color: #131313 !important;
+}
+.about-row{
+    background-color: #fb6818;
+}
+
+    /* Custom Styles */
+    .banner_section {
+      background-color: #f9f9f9;
+      padding: 50px 0;
+    }
+
+    .text-content {
+      margin-top: 20px;
+    }
+
+    .banner_subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .banner_title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .banner_text {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .button_group .btn {
+      margin-right: 10px;
+      padding: 10px 20px;
+      border-radius: 30px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+    }
+
+    .btn-secondary {
+      background-color: #6c757d;
+      border: none;
+    }
+
+
+    @media (max-width: 768px) {
+      /* -------------------- General Resets -------------------- */
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden !important;
+        width: 100vw;
+      }
+      
+      *, *::before, *::after {
+        box-sizing: border-box;
+        max-width: 100%;
+      }
+      
+      .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        margin: 0 auto !important;
+      }
+      
+      .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        overflow-x: hidden;
+      }
+      
+      /* -------------------- Header Section -------------------- */
+      .header_section nav .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .header_section .search_section ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        z-index: 999;
+        padding: 10px 0;
+      }
+      /* -------------------- Banner (Carousel) Section -------------------- */
+      .carousel-item .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .carousel-item .col-md-6 {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      
+      /* -------------------- Services Section -------------------- */
+      .services_section .news_main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      .news_section_left,
+      .news_section_right {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      
+      /* -------------------- About Section -------------------- */
+
+      .about_section .col-md-6:nth-child(1) { 
+        order: 2; /* Moves the first div (image) below */
+      }
+      .about_section .col-md-6:nth-child(2) { 
+        order: 1; /* Moves the second div (text) above */
+      }
+
+      .about_section .about-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .about_section .col-md-6 {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      
+      .readmebutton {
+        width: 100%;
+        float: left;
+        font-size: 18px;
+        color: #ffffff;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+      }
+      .about_taital::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: 100px;
+        height: 10px;
+        background-color: #ffffff05;
+        border-radius: 350px;
+      }
+      /* -------------------- School Section -------------------- */
+      .school_section .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .images_main {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      
+      .student_taital::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: 100px;
+        height: 10px;
+        background-color: #ffffff05;
+        border-radius: 350px;
+      }
+      /* -------------------- Blog Section -------------------- */
+      .Blog_section .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .blog_main {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      
+      /* Force the container holding the blog items and its Read More button
+         to be a vertical flex container */
+      .Blog_section .school_section.layout_padding {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .Blog_section .school_section.layout_padding .row {
+        order: 1;
+      }
+      
+      .Blog_section .school_section.layout_padding .read_bt {
+        order: 2;
+        margin-top: 20px;
+      }
+      
+      /* -------------------- Student Section -------------------- */
+      /* Make the student container a flex column to control ordering */
+      .student_section.layout_padding {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      /* Ensure that the row of student items appears first */
+      .student_section.layout_padding .row {
+        order: 1;
+      }
+      
+      /* Ensure that the Read More button appears after the student items */
+      .student_section.layout_padding .read_bt {
+        order: 2;
+        margin-top: 20px;  /* Adjust spacing as needed */
+      }
+      
+      /* -------------------- Footer Section -------------------- */
+      .footer {
+        text-align: center;
+        padding: 15px;
+      }
+      
+      .footer .container {
+        max-width: 100%;
+        padding: 10px;
+      }
+      
+      .footer .row {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .footer iframe {
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      .footer a, .footer p {
+        font-size: 14px;
+        word-wrap: break-word;
+      }
+      
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      
+      .social-icons a {
+        font-size: 18px;
+      }
+
+      .footer_text iframe {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;      /* Adjust as needed */
+        max-width: 100%;
+        height: auto;
+      }
+      /* -------------------- Copyright Section -------------------- */
+      .copyright_section .container {
+        text-align: center;
+        padding: 10px;
+      }
+      
+      /* -------------------- Debugging (Temporary - Remove Once Fixed) -------------------- */
+      /* * { outline: 1px solid red !important; } */
+    }
+    
+
+    /* Tablet view */
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 10px 20px;
+      }
+    
+      .logo img {
+        max-height: 60px;
+        width: auto;
+      }
+    
+      .search_section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px; /* Adds spacing between phone & email */
+        flex-grow: 1;
+        justify-content: center;
+        text-align: center;
+      }
+    
+      .search_section ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 15px;
+      }
+    
+      .search_section ul li {
+        display: inline-block;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+    
+      .navbar-toggler {
+        margin-left: auto;
+      }
+      .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        z-index: 999;
+        padding: 10px 0;
+        /* border-radius: 10px; */
+      }
+    
+      .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .nav-item {
+        width: 100%;
+        padding: 5px 0;
+      }
+    
+      .navbar-toggler {
+        z-index: 1000;
+      }
+      
+      /* Force the row to use flex and allow wrapping */
+      .footer_section .container .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center; /* Ensure everything is centered */
+      }
+    
+      /* First Column (Map) – Force 50% width, order 1 */
+      .footer_section .container .row > div:nth-child(1) {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 1;
+      }
+    
+      /* Second Column (Info Card) – Force 50% width, order 1 */
+      .footer_section .container .row > div:nth-child(2) {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 1;
+      }
+    
+      /* Third Column (Helpful Links) – Force 100% width and center align, order 2 */
+      .footer_section .container .row > div:nth-child(3) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 2;
+        text-align: center;
+        margin-top: 20px; /* Optional: add spacing above the Helpful Links */
+      }
+    
+      /* Fix: Ensure social icons are centered properly */
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px; /* Adds spacing above */
+      }
+    
+      /* Social links list */
+      .social-list {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+        margin: 0 auto; /* Ensures full centering */
+        list-style: none;
+      }
+    
+      /* Each social icon item */
+      .social-list li {
+        display: inline-block;
+      }
+    
+      /* Ensure the icons align properly */
+      .social-list li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: white;
+      }
+      .social-icons {
+        padding-left: 230PX;
+      }
+    }
+    
+
+/* Just Now*/
+    .footer_text iframe{
+      border-radius: 5%;
+    }
+
+    .image_15 img{
+      border-radius: 3%;
+    }
+    
+    .image_2 img{
+      border-radius: 3%;
+    }

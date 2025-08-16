@@ -1,0 +1,466 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <style>
+      .news_section_left_1 {
+    width: 24%;
+    float: left;
+    text-align: center;
+    margin-right: 2%;
+}
+
+.news_section_right_1{
+    width: 74%;
+    float: left;
+}
+      .img_2 img{
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+      }
+      .services_section_3 {
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+    transition: all 0.3s ease;
+}
+.toggle_button {
+   background-color: #007bff;
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   margin-bottom: 10px;
+}
+
+.toggle_button:hover {
+   background-color: #0056b3;
+}
+         .watch-btn {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .watch-btn button {
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 50px;
+      text-align: center;
+    }
+    .video-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: column;
+    }
+    .video-container {
+      width: 80%;
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      position: relative;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .navigation {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .nav-btn {
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      font-size: 24px;
+      color: black;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #ff0000;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+      </style>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Services</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- owl carousel style -->
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets -->
+      <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+     <!--header section start -->
+     <div class="header_section">
+      <div class="container-fluid">
+         <nav class="navbar navbar-dark bg-dark">
+            <a class="logo" href="#"><img src="{% static 'images/mainlogo.png' %}"></a>
+            <div class="search_section">
+               <ul>
+                  <li><a href="#">Call: +91 8408956452</a></li>
+                  <li><a href="#">shivaji.vidyamandir.dhayat123i@gmail.com</a></li>
+               </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample01">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{%url 'home'%}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Services</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'about'%}">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Choose</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Events</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{%url 'contact' %}">Contact Us</a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+      <!--header section end -->
+      <!--services section start -->
+      <div class="services_section layout_padding">
+         <div class="container">
+            <h1 class="services_taital">OUR SERVICES</h1>
+            <div class="services_section_2">
+               <div class="news_main">
+                  <div class="news_section_left_1">
+                     <div class="img_2"><img src="{% static 'images/Faculty.jpeg' %}"></div>
+                  </div>
+                  <div class="news_section_right_1">
+                     <h1 class="great_text">GREAT FACILITIES</h1>
+                     <p class="dolor_text">"Inspiring Minds, Shaping Lives" Our highly qualified and dedicated faculty guide students toward academic and personal success.</p>
+                  </div>
+               </div>
+               <div class="news_main">
+                  <div class="news_section_left_1">
+                     <div class="img_2"><img src="{% static 'images/pure water.jpg' %}"></div>
+                  </div>
+                  <div class="news_section_right_1">
+                     <h1 class="great_text">Pure Water</h1>
+                     <p class="dolor_text">"Health First, Always!" We provide clean and pure drinking water across the campus, ensuring the well-being and hydration of our students and staff.</p>
+                  </div>
+               </div>
+               <div class="news_main">
+                  <div class="news_section_left_1">
+                     <div class="img_2"><img src="{% static 'images/bus.jpg' %}"></div>
+                  </div>
+                  <div class="news_section_right_1">
+                     <h1 class="great_text">SCHOOL BUS</h1>
+                     <p class="dolor_text">"Safe Rides, Every Time" A fleet of well-maintained buses ensures convenient and secure transportation for students and staff across multiple routes.</p>
+                  </div>
+               </div>
+               <div class="news_main">
+                  <div class="news_section_left_1">
+                     <div class="img_2"><img src="{% static 'images/lab.jpeg' %}"></div>
+                  </div>
+                  <div class="news_section_right_1">
+                     <h1 class="great_text">LABS</h1>
+                     <p class="dolor_text">"Where Curiosity Meets Innovation" State-of-the-art science, computer, and language labs equipped with modern tools and technology for hands-on learning.</p>
+                  </div>
+               </div>
+               <div class="news_main">
+                  <div class="news_section_left_1">
+                     <div class="img_2"><img src="{% static 'images/security.jpeg' %}"></div>
+                  </div>
+                  <div class="news_section_right_1">
+                     <h1 class="great_text">Security</h1>
+                     <p class="dolor_text">"24/7 Peace of Mind" Trained security personnel are present round the clock to maintain a safe and protected campus.</p>
+                  </div>
+               </div>
+               <div class="news_main">
+                  <div class="news_section_left_1">
+                     <div class="img_2"><img src="{% static 'images/ground.jpeg' %}"></div>
+                  </div>
+                  <div class="news_section_right_1">
+                     <h1 class="great_text">Pasishta Ground</h1>
+                     <p class="dolor_text">"Unleash Your Potential Outdoors!" Our vast and well-maintained Pasishta Ground is perfect for sports, physical activities, and events, promoting health and teamwork.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="services_section_3">
+               <button class="toggle_button" onclick="toggleServices()">For More</button>
+               <div class="services_section_3" id="servicesContainer" style="display: none;">
+               <div class="news_main">
+                  <div class="news_section_left_1">
+                     <div class="img_2"><img src="{% static 'images/garden.jpg' %}"></div>
+                  </div>
+                  <div class="news_section_right_1">
+                     <h1 class="great_text">Garden</h1>
+                     <p class="dolor_text">"Learning in Nature’s Lap" Our lush green garden offers a serene environment for relaxation, learning, and outdoor activities.</p>
+                  </div>
+               </div>
+               <div class="news_main">
+                  <div class="news_section_left_1">
+                     <div class="img_2"><img src="{% static 'images/equipment.jpeg' %}"></div>
+                  </div>
+                  <div class="news_section_right_1">
+                     <h1 class="great_text">Sports Equipment</h1>
+                     <p class="dolor_text">"Gear Up for Greatness" Our school offers a wide range of high-quality sports equipment to cater to various disciplines like cricket, football, basketball, badminton, and more.</p>
+                  </div>
+               </div>
+               <div class="news_main">
+                  <div class="news_section_left_1">
+                     <div class="img_2"><img src="{% static 'images/Library.jpg' %}"></div>
+                  </div>
+                  <div class="news_section_right_1">
+                     <h1 class="great_text">Library</h1>
+                     <p class="dolor_text">"A Treasure Trove of Knowledge" Our well-stocked library provides a quiet space with an extensive collection of books, journals, and digital resources for every learner.</p>
+                  </div>
+               </div>
+               <div class="news_main">
+                  <div class="news_section_left_1">
+                     <div class="img_2"><img src="{% static 'images/events.jpg' %}"></div>
+                  </div>
+                  <div class="news_section_right_1">
+                     <h1 class="great_text">Events</h1>
+                     <p class="dolor_text">"Celebrating Talent and Culture" We host regular events, competitions, and cultural programs to encourage creativity, leadership, and community building.</p>
+                  </div>
+               </div>
+               <div class="news_main">
+                  <div class="news_section_left_1">
+                     <div class="img_2"><img src="{% static 'images/campus.jpeg' %}"></div>
+                  </div>
+                  <div class="news_section_right_1">
+                     <h1 class="great_text">Smart Campus</h1>
+                     <p class="dolor_text">"Your Safety is Our Priority" The entire campus is monitored by CCTV cameras, ensuring a secure and disciplined environment.</p>
+                  </div>
+               </div>
+               <div class="news_main">
+                  <div class="news_section_left_1">
+                     <div class="img_2"><img src="{% static 'images/night study.jpg' %}"></div>
+                  </div>
+                  <div class="news_section_right_1">
+                     <h1 class="great_text">Night Study</h1>
+                     <p class="dolor_text">"Guided Learning, Anytime" Our night study sessions provide a calm and focused environment for students to revise and prepare under the guidance of experienced mentors.</p>
+                  </div>
+               </div>
+            </div>
+            <script>
+               function toggleServices() {
+                  const servicesContainer = document.getElementById("servicesContainer");
+                  const toggleButton = document.querySelector(".toggle_button");
+
+                  if (servicesContainer.style.display === "none") {
+                     servicesContainer.style.display = "block";
+                     toggleButton.textContent = "For Less";
+                  } else {
+                     servicesContainer.style.display = "none";
+                     toggleButton.textContent = "For More";
+                  }
+               }
+            </script>
+            <div class="watch-btn read_bt">
+               <button id="watchBtn">For Video's</button>
+             </div>
+
+             <div class="video-overlay" id="videoOverlay">
+               <button class="close-btn" id="closeBtn">&times;</button>
+               <div class="video-container">
+                 <video id="videoElement" controls></video>
+                 <div class="navigation">
+                   <button class="nav-btn" id="prevBtn">&#10094;</button>
+                   <button class="nav-btn" id="nextBtn">&#10095;</button>
+                 </div>
+               </div>
+             </div>
+
+             <script>
+               const videoSources = [
+                 "{% static 'images/services-video.mp4' %}",
+                 "{% static 'images/services-video.mp4' %}",
+                 "{% static 'images/services-video.mp4' %}"
+               ];
+
+               const watchBtn = document.getElementById("watchBtn");
+               const videoOverlay = document.getElementById("videoOverlay");
+               const videoElement = document.getElementById("videoElement");
+               const closeBtn = document.getElementById("closeBtn");
+               const prevBtn = document.getElementById("prevBtn");
+               const nextBtn = document.getElementById("nextBtn");
+
+               let currentVideoIndex = 0;
+
+               function showOverlay() {
+                 videoOverlay.style.display = "flex";
+                 loadVideo(currentVideoIndex);
+               }
+
+               function loadVideo(index) {
+                 videoElement.src = videoSources[index];
+                 videoElement.play();
+               }
+
+               function closeOverlay() {
+                 videoOverlay.style.display = "none";
+                 videoElement.pause();
+                 videoElement.src = "";
+               }
+
+               watchBtn.addEventListener("click", showOverlay);
+
+               closeBtn.addEventListener("click", closeOverlay);
+
+               prevBtn.addEventListener("click", () => {
+                 currentVideoIndex = (currentVideoIndex - 1 + videoSources.length) % videoSources.length;
+                 loadVideo(currentVideoIndex);
+               });
+
+               nextBtn.addEventListener("click", () => {
+                 currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+                 loadVideo(currentVideoIndex);
+               });
+
+               document.addEventListener("keydown", (event) => {
+                 if (event.key === "Escape") {
+                   closeOverlay();
+                 }
+               });
+             </script>
+         </div>
+      </div>
+      <!--services section end -->
+  <!--footer section start -->
+  <div class="footer_section layout_padding">
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-6 col-sm-12">
+               <div class="footer_text">
+                   <div class="col-lg-3 col-sm-6">
+                       <h5 class="information_text">Location</h5>
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.5532919420552!2d75.20231157521356!3d17.528824983382673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc41dabb9fe2133%3A0x73b34c2687c45def!2sShri%20Chhatrapati%20Shivaji%20Vidyamandir%20Dhayati!5e0!3m2!1sen!2sin!4v1737393551639!5m2!1sen!2sin" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   </div>
+               </div>
+           </div>
+           <div class="col-lg-3 col-sm-6">
+               <h5 class="information_text">Information</h5>
+               <div class="info-card">
+                   <p>Contact Us</p>
+                   <p>Email: shivaji.vidyamandir.dhayat123i@gmail.com</p>
+                   <p>Phone: +91 8408956452</p>
+                   <p>Address: Dhayati Tal. Sangola ,Dist. Solapur</p>
+               </div>
+           </div>
+           <div class="col-lg-3 col-sm-6">
+               <h5 class="information_text social-text">Helpful Links</h5>
+               <div class="social-icons">
+                   <ul class="social-list">
+                       <li><a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                       <li><a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                       <li><a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                       <li><a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+<!--footer section end -->
+<!--copyright section start -->
+<div class="copyright_section">
+   <div class="container">
+       <p class="copyright_text">@Copyright Shri Chhatrapati Shivaji Vidyamandir Dhayati All rights reserved<a href="#">Development by your Elite Interns & maintain by Elite Softwares, pune</a></p>
+   </div>
+</div>
+<!--copyright section end -->
+<!-- Javascript files-->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+<script src="{% static 'js/plugin.js' %}"></script>
+<!-- sidebar -->
+<script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+<!-- javascript -->
+<script src="{% static 'js/owl.carousel.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../assets/js/vendor/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<!-- JavaScript -->
+<script>
+   // Toggle visibility of hidden content
+   const readMoreBtn = document.getElementById('read-more-btn');
+   const hiddenContent = document.getElementById('hidden-content');
+
+   readMoreBtn.addEventListener('click', () => {
+       if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
+           hiddenContent.style.display = 'block';
+           readMoreBtn.textContent = 'Read Less';
+       } else {
+           hiddenContent.style.display = 'none';
+           readMoreBtn.textContent = 'Read More';
+       }
+   });
+</script>
+</body>
+</html>

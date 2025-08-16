@@ -1,0 +1,474 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Shri Chhatrapati Shivaji Vidyamandir </title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- owl carousel style -->
+      <link rel="stylesheet" type="text/css" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css' %}" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/fevicon.png' %}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/fevicon.png' %}">
+      <link rel="shortcut icon" href="{% static 'images/fevicon.png' %}" type="image/x-icon">
+      <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+      
+      <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif' " />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}"/>
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+      <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %}" media="screen">
+   </head>
+   <body>
+      <!--header section start -->
+      <div class="header_section">
+         <div class="container-fluid">
+            <nav class="navbar navbar-dark bg-dark">
+               <a class="logo" href="{%url 'home'%}"><img src="{% static 'images/mainlogo.png' %}"></a>
+               <div class="search_section">
+                  <ul>
+                     <li><a href="#">Call: +91 8408956452</a></li>
+                     <li><a href="#">shivaji.vidyamandir.dhayat123i@gmail.com</a></li>
+                  </ul>
+               </div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarsExample01">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="{%url 'home'%}">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{%url 'services'%}">Services</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about'%}">About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{%url 'choose'%}">Choose</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{%url 'events'%}">Events</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{%url 'contact' %}">Contact Us</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+         <!--banner section start -->
+         <div class=" layout_padding">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="taital_main">
+                                 <h4 class="banner_taital_1">Learning Today,</h4>
+                                 <h1 class="banner_taital">Leading Tomorrow</h1>
+                                 <p class="banner_text">We believe in the power of every child to shape a brighter future. Together, we inspire growth, ignite curiosity, and empower the leaders of tomorrow</p>
+                                 <div class="btn_main">
+                                    <div class="more_bt"><a href="{%url 'about'%}">About Us</a></div>
+                                    <div class="contact_bt"><a href="{%url 'contact'%}">Contact Now</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div><img src="{% static 'images/hero-carousel/img1.png'%}" class="image_1"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="taital_main">
+                                 <h4 class="banner_taital_1">Together, We Build</h4>
+                                 <h1 class="banner_taital">Brighter Futures.</h1>
+                                 <p class="banner_text">At our school, we believe in the collective power of community and education. Together, we nurture young minds, foster creativity, and pave the way for brighter futures filled with endless possibilities</p>
+                                 <div class="btn_main">
+                                    <div class="more_bt"><a href="{%url 'about'%}">About Us</a></div>
+                                    <div class="contact_bt"><a href="{%url 'contact'%}">Contact Now</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div><img src="{% static 'images/hero-carousel/img2.png'%}" class="image_1"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="taital_main">
+                                 <h4 class="banner_taital_1">Inspiring a Lifelong </h4>
+                                 <h1 class="banner_taital">Love for Learning</h1>
+                                 <p class="banner_text">We cultivate curiosity and a passion for learning in every child, empowering them to explore, grow, and succeed throughout their lives</p>
+                                 <div class="btn_main">
+                                    <div class="more_bt"><a href="{%url 'about'%}">About Us</a></div>
+                                    <div class="contact_bt"><a href="{%url 'contact'%}">Contact Now</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div><img src="{% static 'images/hero-carousel/img3.png'%}" class="image_1"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="taital_main">
+                                 <h4 class="banner_taital_1">Together, We Create Tomorrow’s</h4>
+                                 <h1 class="banner_taital"> Innovators</h1>
+                                 <p class="banner_text">Our students are the innovators of the future. Together, we nurture their creativity and critical thinking, preparing them to solve tomorrow’s challenges</p>
+                                 <div class="btn_main">
+                                    <div class="more_bt"><a href="{%url 'about'%}">About Us</a></div>
+                                    <div class="contact_bt"><a href="{%url 'contact'%}">Contact Now</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div><img src="{% static 'images/hero-carousel/img4.png'%}" class="image_1"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="color_main"><i class="fas fa-angle-left"></i></i></span>
+               </a>
+               <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="color_main"><i class="fas fa-angle-right"></i></i></span>
+               </a>
+            </div>
+         </div>
+         <!--banner section end -->
+      </div>
+      <!--header section end -->
+
+      <!--services section start -->
+      <div class="services_section layout_padding">
+         <div class="container">
+            <h1 class="services_taital">OUR SERVICES</h1>
+            <div class="services_section_2">
+               <div class="news_main">
+                  <div class="news_section_left">
+                     <div class="image_2"><img src="{% static 'images/services/img-2.png'%}"></div>
+                  </div>
+                  <div class="news_section_right">
+                     <h1 class="great_text">GREAT FACULTY</h1>
+                     <p class="dolor_text">Our exceptional faculty brings expertise, passion, and personalized attention to every student, fostering growth, critical thinking, and a lifelong love for learning.</p>
+                  </div>
+               </div>
+               <div class="news_main">
+                  <div class="news_section_left">
+                     <div class="image_2"><img src="{% static 'images/services/img-3.png'%}"></div>
+                  </div>
+                  <div class="news_section_right">
+                     <h1 class="great_text">Innovative Laboratories</h1>
+                     <p class="dolor_text">Our advanced laboratories offer hands-on learning experiences, enabling students to explore, experiment, and bring ideas to life in science, technology, and innovation.</p>
+                  </div>
+               </div>
+               <div class="news_main">
+                  <div class="news_section_left">
+                     <div class="image_2"><img src="{% static 'images/services/img-4.png'%}"></div>
+                  </div>
+                  <div class="news_section_right">
+                     <h1 class="great_text">Safe and Reliable Transportation</h1>
+                     <p class="dolor_text">Our school bus service ensures safe, comfortable, and timely transportation with well-maintained buses, trained drivers, and strict safety protocols for worry-free travel.</p>
+                  </div>
+               </div>
+               </div>
+            </div>
+            <div class="read_bt"><a href="{%url 'services'%}">Read More</a></div>
+         </div>
+      </div>
+      <!--services section end -->
+
+      <!--about section start -->
+      <div class="about_section layout_padding">
+         <div class="col-md-12">
+            <div class="row about-row">
+               <div class="col-md-6 padding_0">
+                  <div class="image_8"><img src="{% static 'images/school.png'%}"></div>
+               </div>
+               <div class="col-md-6 padding_0">
+                  <div class="about_main">
+                     <h1 class="about_taital">About Our School</h1>
+                     <p class="about_text">Our school is a nurturing space where students thrive academically and personally. We focus on holistic development, blending academics, creativity, and values to prepare them for a bright future.</p>
+                     <div class="read_bt_1 readmebutton"><a href="{%url 'about'%}">Read More</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--about section end -->
+
+      <!--school section start -->
+      <div class="school_section layout_padding">
+         <div class="container">
+            <h1 class="services_taital">Why choose our school</h1>
+            <p class="school_text">Empowering Young Minds for a Brighter Tomorrow!</p>
+            <div class="school_section layout_padding">
+               <div class="row">
+                  <div class="col-lg-4 col-sm-12 col-md-4 images_main">
+                     <div class="image_9 "><img src="{% static 'images/why-choose/img-9.png'%}"></div>
+                     <h3 class="pure_text">Health and Hygiene</h3>
+                     <p class="many_text">Providing accessible, clean drinking water through strategically placed water dispensers equipped with advanced filtration systems.</p>
+                     <!-- <div class="readmore_bt_2"><a href="#">Raed More</a></div> -->
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4 images_main">
+                     <div class="image_9"><img src="{% static 'images/why-choose/img-10.png'%}"></div>
+                     <h3 class="pure_text">Large Play ground</h3>
+                     <p class="many_text">A large, open playground designed for various sports and recreational activities, promoting physical fitness and outdoor fun</p>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4 images_main">
+                     <div class="image_9"><img src="{% static 'images/why-choose/img-11.png' %}"></div>
+                     <h3 class="pure_text">School Bus Service</h3>
+                     <p class="many_text">The school bus service ensures timely and secure transportation for students to and from school every day.</p>
+                     <!-- <div class="readmore_bt_2"><a href="#">Raed More</a></div> -->
+                  </div>
+                  <div class="readmore_bt_2"><a href="{%url 'choose'%}">Read More</a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--school section end -->
+
+      <!--Blog section start -->
+      <div class="Blog_section layout_padding">
+         <div class="container">
+            <h1 class="services_taital">Our Events</h1>
+            <p class="school_text">Every Moment, a Celebration of Learning,
+               Together We Grow and Achieve</p>
+            <div class="school_section layout_padding">
+               <div class="row">
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                     <div class="blog_main">
+                        <div class="image_12"><img src="{% static 'images/event/img-12.png' %}" class="image_12"></div>
+                        <h3 class="distracted_text">Book Fair</h3>
+                        <p class="ipsum_text">A literary feast with books of all genres for every age group. Encouraging the joy of reading while fostering a love for stories and knowledge</p>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                     <div class="blog_main">
+                        <h3 class="distracted_text">Cultural Day</h3>
+                        <p class="ipsum_text">Enjoy a mesmerizing display of music, dance, and traditions from various cultures. Promoting unity and respect through performances and storytelling.</p>
+                        <div class="image_12"><img src="{% static 'images/event/img-13.png' %}" class="image_12"></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                     <div class="blog_main">
+                        <div><img src="{% static 'images/event/img-14.png' %}" class="image_12"></div>
+                        <h3 class="distracted_text">Sports Day</h3>
+                        <p class="ipsum_text">Our Annual School Sports Day is a celebration of teamwork, determination, and the spirit of healthy competition. This vibrant event brings</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="read_bt"><a href="{%url 'events'%}">Read More</a></div>
+            </div>
+         </div>
+      </div>
+      <!--Blog section end -->
+
+      <!--student section start -->
+      <div class="student_section layout_padding">
+         <div id="main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                           <h1 class="student_taital">Welcome to Our School</h1>
+                           <p class="student_text">Our school empowers students to excel academically and grow holistically. We foster creativity, leadership, and a passion for lifelong learning</p>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                           <div class="student_bg">
+                              <div class="image_15"><img src="{% static 'images/last-carousel/img-15.png' %}"></div>
+                              <h4 class="hannery_text">Science and Technology</h4>
+                              <p class="fact_text">The teachers here have helped me discover my love for science and technology!</p>
+                           </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                           <div class="student_bg_1">
+                              <div class="image_15"><img src="{% static 'images/last-carousel/img-16.png' %}"></div>
+                              <h4 class="hannery_text">Sports</h4>
+                              <p class="fact_text">The sports programs here are amazing! I've grown so much as an athlete.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                           <h1 class="student_taital">Our Values</h1>
+                           <p class="student_text">We believe in nurturing responsibility, curiosity, and kindness in every student to create compassionate global citizens.</p>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                           <div class="student_bg">
+                              <div class="image_15"><img src="{% static 'images/last-carousel/img-17.png' %}"></div>
+                              <h4 class="hannery_text"> Art</h4>
+                              <p class="fact_text">Art and music classes here have been such an inspiration to mee</p>
+                           </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                           <div class="student_bg_1">
+                              <div class="image_15"><img src="{% static 'images/last-carousel/img-18.png' %}"></div>
+                              <h4 class="hannery_text">Leadership</h4>
+                              <p class="fact_text">I've learned so much about teamwork and leadership through group projects.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                           <h1 class="student_taital">Future Ready Student</h1>
+                           <p class="student_text">Our innovative curriculum equips students with the skills and knowledge to succeed in a fast-changing world</p>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                           <div class="student_bg">
+                              <div class="image_15"><img src="images/last-carousel/img-19.png"></div>
+                              <h4 class="hannery_text">Creativity</h4>
+                              <p class="fact_text">I love how the school encourages us to think creatively and innovate</p>
+                           </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                           <div class="student_bg_1">
+                              <div class="image_15"><img src="{% static 'images/last-carousel/img-20.png' %}"></div>
+                              <h4 class="hannery_text">Experiments</h4>
+                              <p class="fact_text">IThe hands-on experiments in the science lab make learning so exciting!</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <i class="padding_top_10"><img src="{% static 'images/left-arrow.png' %}"></i>
+            </a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="padding_top_10"><img src="{% static 'images/right-arrow.png' %}"></i>
+            </a>
+         </div>
+      </div>
+      <!--student section end -->
+  <!--footer section start -->
+  <div class="footer_section layout_padding">
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-6 col-sm-12">
+               <div class="footer_text">
+                   <div class="col-lg-3 col-sm-6">
+                       <h5 class="information_text">Location</h5>
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.5532919420552!2d75.20231157521356!3d17.528824983382673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc41dabb9fe2133%3A0x73b34c2687c45def!2sShri%20Chhatrapati%20Shivaji%20Vidyamandir%20Dhayati!5e0!3m2!1sen!2sin!4v1737393551639!5m2!1sen!2sin" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   </div>
+               </div>
+           </div>
+           <div class="col-lg-3 col-sm-6">
+               <h5 class="information_text">Information</h5>
+               <div class="info-card">
+                   <p>Contact Us</p>
+                   <p>Email: shivaji.vidyamandir.dhayat123i@gmail.com</p>
+                   <p>Phone: +91 8408956452</p>
+                   <p>Address: Dhayati Tal. Sangola ,Dist. Solapur</p>
+               </div>
+           </div>
+           <div class="col-lg-3 col-sm-6">
+               <h5 class="information_text social-text">Helpful Links</h5>
+               <div class="social-icons">
+                   <ul class="social-list">
+                       <li><a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                       <li><a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                       <li><a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                       <li><a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+<!--footer section end -->
+<!--copyright section start -->
+<div class="copyright_section">
+   <div class="container">
+       <p class="copyright_text">@Copyright Shri Chhatrapati Shivaji Vidyamandir Dhayati All rights reserved<a href="#">Development by your Elite Interns & maintain by Elite Softwares, pune</a></p>
+   </div>
+</div>
+<!--copyright section end -->
+<!-- Javascript files-->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+<script src="{% static 'js/plugin.js' %}"></script>
+<!-- sidebar -->
+<script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+<!-- javascript -->
+<script src="{% static 'js/owl.carousel.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../assets/js/vendor/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<!-- JavaScript -->
+<script>
+   // Toggle visibility of hidden content
+   const readMoreBtn = document.getElementById('read-more-btn');
+   const hiddenContent = document.getElementById('hidden-content');
+
+   readMoreBtn.addEventListener('click', () => {
+       if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
+           hiddenContent.style.display = 'block';
+           readMoreBtn.textContent = 'Read Less';
+       } else {
+           hiddenContent.style.display = 'none';
+           readMoreBtn.textContent = 'Read More';
+       }
+   });
+</script>
+</body>
+</html>

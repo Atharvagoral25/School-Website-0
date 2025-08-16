@@ -1,0 +1,263 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <style>
+         /* Button Styling */
+         .read-more-btn {
+            width: 100%;
+            float: left;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #0d7550;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 50px;
+         }
+
+         .read-more-btn:hover {
+            background-color: #0b5c40; /* Optional hover effect */
+         }
+
+         /* Initially hide the content */
+         .hidden-content {
+            display: none;
+         }
+      </style>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Choose</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- owl carousel style -->
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets -->
+      <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!--header section start -->
+      <div class="header_section">
+         <div class="container-fluid">
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="logo" href="{% url 'home' %}"><img src="{% static 'images/mainlogo.png' %}"></a>
+                <div class="search_section">
+                    <ul>
+                        <li><a href="#">Call: +91 8408956452</a></li>
+                        <li><a href="#">shivaji.vidyamandir.dhayat123i@gmail.com</a></li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'services' %}">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'choose' %}">Choose</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'events' %}">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+         </div>
+      </div>
+      <!--header section end -->
+      <!--school section start -->
+      <!-- data modification is done from here -->
+      <div class="school_section layout_padding">
+         <div class="container">
+            <h1 class="services_taital">Why choose our school</h1>
+            <p class="school_text">Empowering Young Minds for a Brighter Tomorrow!</p>
+
+            <div class="school_section layout_padding">
+               <div class="row">
+                  <div class="col-lg-4 col-sm-12 col-md-4 images_main">
+                     <div class="image_9 "><img src="{% static 'images/faculty.png' %}"></div>
+                     <h3 class="pure_text">Faculty and Teaching Excellence</h3> <!--Faculty-->
+                     <p class="many_text">Our skilled and passionate faculty nurture critical thinking and a love for learning, helping every student achieve their best.</p>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4 images_main">
+                     <div class="image_9"><img src="{% static 'images/lab.png' %}"></div>
+                     <h3 class="pure_text">Innovative Labs and Learning Spaces</h3> <!--Labs-->
+                     <p class="many_text"> Our state-of-the-art labs provide hands-on learning in science, computers, and innovation, bringing concepts to life.</p>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4 images_main">
+                     <div class="image_9"><img src="{% static 'images/carrer.png' %}"></div>
+                     <h3 class="pure_text">Career and Future Guidance</h3>   <!--carreer guidance-->
+                     <p class="many_text">Career counseling and mentorship programs are held to help students make informed decisions for a bright future.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+<!-- modification is done from here for additional div  -->
+         <div class="container">
+            <div class="school_section layout_padding">
+               <div class="row">
+                  <div class="col-lg-4 col-sm-12 col-md-4 images_main">
+                     <div class="image_9 "><img src="{% static 'images/health.png' %}"></div>
+                     <h3 class="pure_text">Health and Hygiene</h3>  <!--health and hygiene-->
+                     <p class="many_text"> Clean drinking water and strict hygiene measures ensure the health and well-being of everyone on campus</p>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4 images_main">
+                     <div class="image_9"><img src="{% static 'images/transportatiom.png' %}"></div>
+                     <h3 class="pure_text">Safe Transportation</h3>  <!--Transport-->
+                     <p class="many_text">Our safe and reliable bus service ensures timely and safe transportation with strict safety protocols in place.</p>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4 images_main">
+                     <div class="image_9"><img src="{% static 'images/development.png' %}"></div>
+                     <h3 class="pure_text">Holistic Development</h3>  <!--Holistic Development-->
+                     <p class="many_text">Workshops and activities enhance communication, leadership, and soft skills, preparing students for modern challenges.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="school_section layout_padding">
+         <div class="container">
+            <!-- Hidden Content -->
+            <div id="hidden-content" class="hidden-content">
+               <div class="school_section layout_padding">
+                  <div class="row">
+                     <div class="col-lg-4 col-sm-12 col-md-4 images_main">
+                        <div class="image_9"><img src="{% static 'images/guest.png' %}" alt="Guest Lectures"></div>
+                        <h3 class="pure_text">Guest Lectures and Expert Panels</h3>
+                        <p class="many_text">Expert guest lectures expose students to real-world insights and inspire them to pursue excellence.</p>
+                     </div>
+                     <div class="col-lg-4 col-sm-12 col-md-4 images_main">
+                        <div class="image_9"><img src="{% static 'images/cultural.png' %}" alt="Cultural Activities"></div>
+                        <h3 class="pure_text">Cultural Activities</h3>
+                        <p class="many_text">We encourage artistic expression through music, dance, drama, and art, embracing creativity and diversity.</p>
+                     </div>
+                     <div class="col-lg-4 col-sm-12 col-md-4 images_main">
+                        <div class="image_9"><img src="{% static 'images/sports.png' %}" alt="Sports and Fitness"></div>
+                        <h3 class="pure_text">Sports and Fitness</h3>
+                        <p class="many_text">From expert coaching to top-notch facilities, we ensure students excel in sports and develop a strong spirit of teamwork.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Read More Button -->
+            <div class="read_bt">
+               <button id="read-more-btn" class="read-more-btn">Read More</button>
+            </div>
+         </div>
+      </div>
+
+      <!-- JavaScript -->
+      <script>
+         // Toggle visibility of hidden content
+         const readMoreBtn = document.getElementById('read-more-btn');
+         const hiddenContent = document.getElementById('hidden-content');
+
+         readMoreBtn.addEventListener('click', () => {
+            if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
+               hiddenContent.style.display = 'block';
+               readMoreBtn.textContent = 'Read Less';
+            } else {
+               hiddenContent.style.display = 'none';
+               readMoreBtn.textContent = 'Read More';
+            }
+         });
+      </script>
+
+      <!--school section end -->
+      <!--footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 col-sm-12">
+                  <div class="footer_text">
+                     <div class="col-lg-3 col-sm-6">
+                        <h5 class="information_text">Direction</h5>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.5532919420552!2d75.20231157521356!3d17.528824983382673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc41dabb9fe2133%3A0x73b34c2687c45def!2sShri%20Chhatrapati%20Shivaji%20Vidyamandir%20Dhayati!5e0!3m2!1sen!2sin!4v1737393551639!5m2!1sen!2sin" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h5 class="information_text">Information</h5>
+                  <div class="info-card">
+                     <p>Contact Us</p>
+                     <p>Email: shivaji.vidyamandir.dhayat123i@gmail.com</p>
+                     <p>Phone: +91 8408956452</p>
+                     <p>Address: dhayati</p>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h5 class="information_text">Helpful Links</h5>
+                  <div class="social-icons">
+                     <ul class="social-list">
+                       <li><a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                       <li><a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                       <li><a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                       <li><a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                     </ul>
+                   </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--footer section end -->
+      <!--copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">@Copyright Shri Chhatrapati Shivaji Vidyamandir Dhayati All rights reserved<a href="index.html">Development by your Elite Interns& maintain by Elite Softwares, pune</a></p>
+         </div>
+      </div>
+      <!--copyright section end -->
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'js/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+      <!-- javascript -->
+      <script src="{% static 'js/owl.carousel.js' %}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      <script src="../../assets/js/vendor/popper.min.js"></script>
+      <script src="../../dist/js/bootstrap.min.js"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+   </body>
+</html>
